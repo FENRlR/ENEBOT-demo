@@ -1,0 +1,7 @@
+//프록시1, 올라가기까지 약 3분 걸림
+               ArrayList<String> clip = new ArrayList<String>();
+                clip.add("--proxy=66.70.146.227:3128");
+                clip.add("--proxy-type=http");
+                caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, clip);
+
+//
