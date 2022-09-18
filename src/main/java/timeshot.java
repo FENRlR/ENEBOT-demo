@@ -240,7 +240,7 @@ public class timeshot extends Thread {
             //- Weekly reminder
             String cday = kortime.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);//current name of day
 
-            if(cday.equals("Monday")||cday.equals("Thursday") && sclist.size()>1 && returnko[3]==12 && brtrigger==0)//sends a reminder on every Monday and Thursday, 12:00
+            if(cday.equals("Monday") && sclist.size()>1 && returnko[3]==12 && brtrigger==0 ||cday.equals("Thursday") && sclist.size()>1 && returnko[3]==12 && brtrigger==0)//sends a reminder on every Monday and Thursday, 12:00
             {
                 List<String> newsc = new ArrayList<>();//sclist cloning except its 0th element(which contains IDs)
                 for(int  j=1;  j<sclist.size(); j++)
@@ -265,7 +265,7 @@ public class timeshot extends Thread {
                 }
                 brtrigger=1;//To avoid multiple reminder
             }
-            else if(!cday.equals("Monday")||!cday.equals("Thursday") && brtrigger==1)
+            else if(!cday.equals("Monday") && brtrigger==1 ||!cday.equals("Thursday") && brtrigger==1)
             {
                 brtrigger=0;
             }
