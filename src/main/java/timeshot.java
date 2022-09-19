@@ -271,28 +271,11 @@ public class timeshot extends Thread {
                 brtrigger=0;
             }
 
-            //- rest for few seconds TODO : To optimize performance further, make it rest till the next minute
+            //- rest till the next minute
             try{
-                if(sclist.size()<10)
-                {
-                    TimeUnit.SECONDS.sleep(35);
-                }
-                else if(sclist.size()<20)
-                {
-                    TimeUnit.SECONDS.sleep(30);
-                }
-                else if(sclist.size()<30)
-                {
-                    TimeUnit.SECONDS.sleep(25);
-                }
-                else if(sclist.size()<40)
-                {
-                    TimeUnit.SECONDS.sleep(20);
-                }
-                else
-                {
-                    TimeUnit.SECONDS.sleep(15);
-                }
+                kortime = LocalDateTime.now(timezone);
+                returnko = splitter(kortime.format(formatter));
+                TimeUnit.SECONDS.sleep(60-returnko[4]);
             }catch(Exception e){
                 e.printStackTrace();
             }
