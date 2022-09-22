@@ -437,10 +437,9 @@ public class response extends ListenerAdapter{
                     newsc.add(timeshot.sclist.get(i));
                 }
                 List<String> newsca = timeshot.xremoval(newsc);
-
                 int delnum = Integer.parseInt(message.split(" ",3)[2]);
 
-                if(delnum<newsc.size() && delnum>0)//delete request reservation
+                if(delnum<=newsc.size() && delnum>0)//delete request reservation
                 {
                     timeshot.scdelete.add(newsc.get(delnum-1));
                     timeshot.dlshot = 1;
