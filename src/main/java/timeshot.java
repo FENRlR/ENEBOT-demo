@@ -325,7 +325,7 @@ public class timeshot extends Thread {
         return num;
     }
 
-    //- gets year, month, and day, convert them into yyyy/mm/dd format if not, and merge them into a number
+    //- gets year, month, and day. convert them into yyyy/mm/dd format if not, and merge them into a number
     public static int intsum(int a, int b, int c){
         String total = Integer.toString(a) + zradd(Integer.toString(b)) + zradd(Integer.toString(c));
         return Integer.parseInt(total);
