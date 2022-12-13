@@ -264,7 +264,7 @@ public class timeshot extends Thread {
                 }catch(NullPointerException e){
                     e.printStackTrace();
                 }
-                brtrigger=1;//To avoid multiple reminder
+                brtrigger=1;//To avoid multiple reminders
             }
             else if(!cday.equals("Monday") && brtrigger==1 ||!cday.equals("Thursday") && brtrigger==1)
             {
