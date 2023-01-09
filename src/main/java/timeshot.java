@@ -25,7 +25,7 @@ public class timeshot extends Thread {
     private static final String datesep = "\u000B∏∃";//separation indicator
 
     public static List<String> sclist = new ArrayList<>();//-schedule list
-    public static List<String> scdelete = new ArrayList<>();//-delete reservation list
+    public static Vector<String> scdelete = new Vector<>();//-delete reservation list
     
     private static int rcex = 0;//for time check
 
@@ -114,7 +114,7 @@ public class timeshot extends Thread {
                 int stai = scdelete.size();
                 for(int i=0; i<stai; i++)
                 {
-                    subdelete.add(scdelete.get(i));//gets the content of selected element from delete request
+                    subdelete.add(scdelete.get(i));//gets the content of the selected element from delete request
                 }
                 for(int i=stai-1; i>=0; i--)
                 {
