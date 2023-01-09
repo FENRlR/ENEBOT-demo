@@ -41,7 +41,7 @@ public class timeshot extends Thread {
             String returnko = kortime.format(formatter); //current time for comparison
             int[] convtwo = splitter(returnko);
 
-            //flitering part - check if the input follows the correct time format
+            //filtering part - check if the input follows the correct time format
             if(convone[1]>12 || convone[1]<1 || convone[2]<1 || convone[3]>23 || convone[4]>59)
             {
                 return 1;//discard
