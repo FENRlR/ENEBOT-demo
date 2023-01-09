@@ -221,7 +221,7 @@ public class timeshot extends Thread {
                     }
                 }
 
-                if(backtodo.size()>0)//- delete queue to delete process
+                if(backtodo.size()>0)//- passes delete queue to delete process
                 {
                     //minimal start index : 1, maximum end index : raw total + 1
                     googleres.docdel(start,end);
