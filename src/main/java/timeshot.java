@@ -105,15 +105,21 @@ public class timeshot extends Thread {
 
             //seeks delete request
             int subdlshot = 0;
+            List<String> subdelete = new ArrayList<>();
+            
             if(dlshot ==1)
             {
                 dlshot = 0;
                 subdlshot = 1;
-            }
-            List<String> subdelete = new ArrayList<>();
-            for(int  i=0;  i<scdelete.size(); i++)
-            {
-                subdelete.add(scdelete.get(i));//get the content of selected element from delete request
+                int stai = scdelete.size();
+                for(int i=0; i<stai; i++)
+                {
+                    subdelete.add(scdelete.get(i));//gets the content of selected element from delete request
+                }
+                for(int i=stai-1; i>=0; i--)
+                {
+                    scdelete.remove(i);
+                }
             }
 
             //date check
